@@ -88,10 +88,10 @@ module.exports = {
             hr: { borderColor: theme('colors.gray.200') },
             'ol li::marker': {
               fontWeight: '600',
-              color: theme('colors.gray.500'),
+              color: theme('colors.gray.900'),
             },
             'ul li::marker': {
-              backgroundColor: theme('colors.gray.500'),
+              backgroundColor: theme('colors.gray.900'),
             },
             strong: { color: theme('colors.gray.600') },
             blockquote: {

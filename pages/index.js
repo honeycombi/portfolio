@@ -1,101 +1,94 @@
-import Link from '@/components/Link'
-import { PageSEO } from '@/components/SEO'
-import Tag from '@/components/Tag'
-import siteMetadata from '@/data/siteMetadata'
-import { getAllFilesFrontMatter } from '@/lib/mdx'
-import formatDate from '@/lib/utils/formatDate'
+import 'katex/dist/katex.min.css'
+import Link from 'next/link'
+import Image from 'next/image'
 
-import NewsletterForm from '@/components/NewsletterForm'
-
-const MAX_DISPLAY = 5
-
-export async function getStaticProps() {
-  const posts = await getAllFilesFrontMatter('blog')
-
-  return { props: { posts } }
-}
-
-export default function Home({ posts }) {
+export default function Home() {
   return (
-    <>
-      <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
-      <div className="divide-y divide-gray-200 dark:divide-gray-700">
-        <div className="space-y-2 pt-6 pb-8 md:space-y-5">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-            Latest
-          </h1>
-          <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            {siteMetadata.description}
-          </p>
-        </div>
-        <ul className="divide-y divide-gray-200 dark:divide-gray-700">
-          {!posts.length && 'No posts found.'}
-          {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
-            const { slug, date, title, summary, tags } = frontMatter
-            return (
-              <li key={slug} className="py-12">
-                <article>
-                  <div className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
-                    <dl>
-                      <dt className="sr-only">Published on</dt>
-                      <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                        <time dateTime={date}>{formatDate(date)}</time>
-                      </dd>
-                    </dl>
-                    <div className="space-y-5 xl:col-span-3">
-                      <div className="space-y-6">
-                        <div>
-                          <h2 className="text-2xl font-bold leading-8 tracking-tight">
-                            <Link
-                              href={`/blog/${slug}`}
-                              className="text-gray-900 dark:text-gray-100"
-                            >
-                              {title}
-                            </Link>
-                          </h2>
-                          <div className="flex flex-wrap">
-                            {tags.map((tag) => (
-                              <Tag key={tag} text={tag} />
-                            ))}
-                          </div>
-                        </div>
-                        <div className="prose max-w-none text-gray-500 dark:text-gray-400">
-                          {summary}
-                        </div>
-                      </div>
-                      <div className="text-base font-medium leading-6">
-                        <Link
-                          href={`/blog/${slug}`}
-                          className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
-                          aria-label={`Read "${title}"`}
-                        >
-                          Read more &rarr;
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-              </li>
-            )
-          })}
-        </ul>
+    <div className="leading-[1.75]">
+      <div>
+        <p className="pt-10 text-center text-5xl">Hi, I'm Gary</p>
       </div>
-      {posts.length > MAX_DISPLAY && (
-        <div className="flex justify-end text-base font-medium leading-6">
-          <Link
-            href="/blog"
-            className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
-            aria-label="all posts"
-          >
-            All Posts &rarr;
-          </Link>
+      <br />
+      <div className="flex gap-8">
+        <div className="w-3/4">
+          I'm the cofounder of{' '}
+          <a href="https://www.nexusworkshop.org" target="_blank" rel="noreferrer">
+            The Nexus Workshop
+          </a>{' '}
+          and a rising high school junior at{' '}
+          <a href="https://www.mka.org/" target="_blank" rel="noreferrer">
+            Montclair Kimberley Academy
+          </a>
+          . Broadly speaking, I'm mostly interested in math and computer science.
+          {/* Currently Exploring */}
+          <br /> <br />
+          <p className="text-center text-xl font-bold">Currently Exploring</p>
+          <ul>
+            <li>
+              Learning the zero knowledge cryptography circuit compiler language{' '}
+              <a href="https://docs.circom.io" target="_blank" rel="noreferrer">
+                Circom
+              </a>
+              .
+            </li>
+            <li>
+              Growing, marketing, and creating content for my{' '}
+              <a href="https://www.nexusworkshop.org" target="_blank" rel="noreferrer">
+                nonprofit
+              </a>
+              .
+            </li>
+            <li>
+              Speedtyping and learning the{' '}
+              <a href="https://colemakmods.github.io/mod-dh/" target="_blank" rel="noreferrer">
+                Colemak Mod-DH
+              </a>{' '}
+              keyboard layout.
+            </li>
+          </ul>
+          {/* Past */}
+          <br />
+          <p className="text-center text-xl font-bold">Some Things I've Done In The Past</p>
+          <ul>
+            <li>
+              Compete in math competitions. Most notably, I placed fourth place overall and third
+              place for the geometry round at the{' '}
+              <a href="https://cmimconline.org" target="_blank" rel="noreferrer">
+                Carnegie Mellon Informatics and Mathematics Competition
+              </a>
+              . Also, I qualified for the {''}
+              <a
+                href="https://www.maa.org/math-competitions/american-invitational-mathematics-examination-aime"
+                target="_blank"
+                rel="noreferrer"
+              >
+                American Invitational Mathematics Competition
+              </a>{' '}
+              as an 8th grader. Nowadays, I give back to the math contest community through creating
+              content for{' '}
+              <a href="https://www.everaise.org" target="_blank" rel="noreferrer">
+                Everaise Academy
+              </a>
+              .
+            </li>
+            <li>
+              Play ice hockey. Back in 2019, I played in the{' '}
+              <a
+                href="https://www.tournoipee-wee.qc.ca/en/index.html"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Quebec International Pee-Wee Hockey Tournament
+              </a>
+              . Unfortunately, after a few injuries and Covid-19, I don't play as competitively as I
+              used to, but I still enjoy playing on my high school's team.
+            </li>
+          </ul>
         </div>
-      )}
-      {siteMetadata.newsletter.provider !== '' && (
-        <div className="flex items-center justify-center pt-4">
-          <NewsletterForm />
+        <div className="mx-auto block w-1/4">
+          <Image src="/static/images/photo.jpg" width="240" height="300" />
         </div>
-      )}
-    </>
+      </div>
+    </div>
   )
 }
