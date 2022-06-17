@@ -11,7 +11,7 @@
 }
 
 .footnotes {
-  @apply pt-8 mt-12 border-t border-gray-200 dark:border-gray-700;
+  @apply mt-12 border-t border-gray-200 pt-8 dark:border-gray-700;
 }
 
 .csl-entry {
@@ -42,7 +42,7 @@ ol li {
   list-style-position: inside;
   list-style-type: decimal;
   margin-left: 25px;
-    list-style-position: outside;
+  list-style-position: outside;
 }
 
 ul li {
@@ -50,7 +50,5 @@ ul li {
   list-style-position: inside;
   list-style-type: disc;
   margin-left: 20px;
-    list-style-position: outside;
+  list-style-position: outside;
 }
-
-
