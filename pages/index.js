@@ -80,8 +80,22 @@ export default function Home() {
               >
                 Quebec International Pee-Wee Hockey Tournament
               </a>
-              . Unfortunately, after a few injuries and Covid-19, I don't play as competitively as I
-              used to, but I still enjoy playing on my high school's team.
+              . In the same year, I was invited to both the{' '}
+              <a href="https://twitter.com/CombineCrimson" target="_blank" rel="noreferrer">
+                Harvard Crimson Combine
+              </a>{' '}
+              and the{' '}
+              <a
+                href="https://worldhockeyhub.com/world-selects-invitational-trophy/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                World Selects Internationals
+              </a>
+              . Unfortunately, injuries and Covid-19 got in the way, stopping me from participating
+              in these two events as well as large portions of the next two seasons. Nowadays, I
+              don't play as competitively as I used to, but I still enjoy playing on my high
+              school's team.
             </li>
           </ul>
         </div>
