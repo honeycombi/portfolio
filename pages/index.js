@@ -39,7 +39,14 @@ export default function Home() {
               .
             </li>
             <li>
-              Speedtyping and learning the{' '}
+              <a
+                href="https://monkeytype.com/profile?uid=z0FhHkigZgSCeoKS6Z0SvGGG7iu2"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Speedtyping
+              </a>{' '}
+              and learning the{' '}
               <a href="https://colemakmods.github.io/mod-dh/" target="_blank" rel="noreferrer">
                 Colemak Mod-DH
               </a>{' '}
