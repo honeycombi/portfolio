@@ -40,8 +40,8 @@ const siteMetadata = {
     giscusConfig: {
       // Visit the link below, and follow the steps in the 'configuration' section
       // https://giscus.app/
-      repo: 'honeycombi/portfolio',
-      repositoryId: 'R_kgDOHf1-Kw',
+      repo: process.env.NEXT_PUBLIC_GISCUS_REPO,
+      repositoryId: process.env.NEXT_PUBLIC_GISCUS_REPOSITORY_ID,
       category: process.env.NEXT_PUBLIC_GISCUS_CATEGORY,
       categoryId: process.env.NEXT_PUBLIC_GISCUS_CATEGORY_ID,
       mapping: 'pathname', // supported options: pathname, url, title

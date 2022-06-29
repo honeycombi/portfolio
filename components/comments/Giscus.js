@@ -34,8 +34,8 @@ const Giscus = () => {
     script.src = 'https://giscus.app/client.js'
     script.setAttribute('data-repo', 'honeycombi/portfolio')
     script.setAttribute('data-repo-id', 'R_kgDOHf1-Kw')
-    script.setAttribute('data-category', '[ENTER CATEGORY NAME HERE]')
-    script.setAttribute('data-category-id', '[ENTER CATEGORY ID HERE]')
+    script.setAttribute('data-category', 'General')
+    script.setAttribute('data-category-id', 'DIC_kwDOHf1-K84CP739')
     script.setAttribute('data-mapping', 'pathname')
     script.setAttribute('data-reactions-enabled', '1')
     script.setAttribute('data-emit-metadata', '0')
