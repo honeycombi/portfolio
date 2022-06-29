@@ -41,7 +41,6 @@ const Giscus = () => {
     script.setAttribute('data-emit-metadata', '0')
     script.setAttribute('data-input-position', 'top')
     script.setAttribute('data-lang', 'en')
-    script.setAttribute('data-loading', 'lazy')
     script.setAttribute('data-theme', 'light')
     script.setAttribute('crossorigin', 'anonymous')
     script.async = true
