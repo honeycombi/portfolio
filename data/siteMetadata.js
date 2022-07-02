@@ -12,10 +12,10 @@ const siteMetadata = {
   socialBanner: '/static/images/twitter-card.png',
   email: 'ghu2024@mka.org',
   github: 'https://github.com/honeycombi',
-  // twitter: 'https://twitter.com/Twitter',
+  twitter: 'https://twitter.com/garyhu_',
   // facebook: 'https://facebook.com',
   // youtube: 'https://youtube.com',
-  linkedin: 'https://www.linkedin.com/in/gary-hu-86a901240/',
+  linkedin: 'https://www.linkedin.com/in/garykhu/',
   locale: 'en-US',
   analytics: {
     // If you want to use an analytics provider you have to add it to the
